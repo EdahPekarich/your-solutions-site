@@ -1,5 +1,7 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import bsmImage from "../assets/bsm.png";
+import spImage from "../assets/sp.jpg";
 
 function StrategicPlanning() {
   return (
@@ -27,17 +29,22 @@ function StrategicPlanning() {
         </div>
 
         <div className="image-placeholder large">
-          <span>📈</span>
-          <p>Strategic Planning Image</p>
-          <small>Replace with real image</small>
-        </div>
+  <img
+    src={spImage}
+    alt="Strategic Planning"
+    className="hero-image"
+  />
+</div>
       </section>
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>♟</span>
-          <p>Business strategy image</p>
-        </div>
+        <div className="strategy-image-box">
+  <img
+    src={bsmImage}
+    alt="Marketing strategy models"
+    className="strategy-image"
+  />
+</div>
 
         <div>
           <p className="eyebrow">Business Strategy</p>

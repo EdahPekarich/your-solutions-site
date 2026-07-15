@@ -1,5 +1,7 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import websiteVideo from "../assets/webdev_2.mp4";
+import webdImage from "../assets/webdd.png";
 
 function WebsiteDesign() {
   return (
@@ -26,11 +28,17 @@ function WebsiteDesign() {
           </div>
         </div>
 
-        <div className="image-placeholder large">
-          <span>💻</span>
-          <p>Website Design Image</p>
-          <small>Replace with real image</small>
-        </div>
+   <div className="image-placeholder large video-container">
+  <video
+    className="website-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src={websiteVideo} type="video/mp4" />
+  </video>
+</div>
       </section>
 
       <section className="page-section">
@@ -85,10 +93,13 @@ function WebsiteDesign() {
       <Stats />
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>🌐</span>
-          <p>Website preview image</p>
-        </div>
+<div className="strategy-image-box">
+  <img
+    src={webdImage}
+    alt="WebDImage"
+    className="strategy-image"
+  />
+</div>
 
         <div>
           <p className="eyebrow">Why Website Matters</p>

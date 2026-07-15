@@ -1,4 +1,5 @@
 import ContactSection from "../components/ContactSection";
+import contact from "../assets/contact.jpg";
 
 function Contact() {
   return (
@@ -14,10 +15,13 @@ function Contact() {
           </p>
         </div>
 
-        <div className="image-placeholder large">
-          <span>✉</span>
-          <p>Contact image placeholder</p>
-        </div>
+       <div className="image-placeholder large">
+       <img
+         src={contact}
+         alt="Contact"
+         className="hero-image"
+       />
+     </div>
       </section>
 
       <ContactSection />

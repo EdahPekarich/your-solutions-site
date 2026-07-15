@@ -1,5 +1,8 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import cyberSecurityImage from "../assets/cy.jpg";
+import cyssImage from "../assets/cyss.jpg";
+import cysssImage from "../assets/cysss.jpg";
 
 function CyberSecurity() {
   return (
@@ -26,18 +29,23 @@ function CyberSecurity() {
           </div>
         </div>
 
-        <div className="image-placeholder large">
-          <span>🛡️</span>
-          <p>Cyber Security Image</p>
-          <small>Replace with real image</small>
+        <div className="image-placeholder.cyb">
+          <img
+            src={cyberSecurityImage}
+            alt="CyberSecurity"
+            className="hero-image"
+          />
         </div>
       </section>
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>🔐</span>
-          <p>Security consulting image</p>
-        </div>
+      <div className="image-placeholder large">
+        <img
+          src={cyssImage}
+          alt="Cybersec"
+          className="hero-image"
+        />
+      </div>
 
         <div>
           <p className="eyebrow">Our Services</p>
@@ -130,9 +138,12 @@ function CyberSecurity() {
           </p>
         </div>
 
-        <div className="image-placeholder">
-          <span>🧬</span>
-          <p>Security protection image</p>
+        <div className="image-placeholder large">
+          <img
+            src={cysssImage}
+            alt="Cysec"
+            className="hero-image"
+          />
         </div>
       </section>
 

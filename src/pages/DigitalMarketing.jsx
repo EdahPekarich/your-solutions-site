@@ -1,6 +1,8 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import marImage from "../assets/mark.jpg";
 
+import digitalMarketingImage from "../assets/dm.jpg";
 function DigitalMarketing() {
   return (
     <>
@@ -26,18 +28,23 @@ function DigitalMarketing() {
           </div>
         </div>
 
-        <div className="image-placeholder large">
-          <span>🚀</span>
-          <p>Digital Marketing Image</p>
-          <small>Replace with real image</small>
-        </div>
+      <div className="image-placeholder large">
+  <img
+    src={digitalMarketingImage}
+    alt="Digital marketing"
+    className="hero-image"
+  />
+</div>
       </section>
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>📣</span>
-          <p>Marketing strategy image</p>
-        </div>
+       <div className="image-placeholder marketing-image">
+  <img
+    src={marImage}
+    alt="Marketing"
+    className="marketing-img"
+  />
+</div>
 
         <div>
           <p className="eyebrow">Marketing Strategy</p>

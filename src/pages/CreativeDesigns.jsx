@@ -1,5 +1,7 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import cdImage from "../assets/cd.jpg";
+import crdImage from "../assets/crd.png";
 
 function CreativeDesigns() {
   return (
@@ -26,17 +28,22 @@ function CreativeDesigns() {
         </div>
 
         <div className="image-placeholder large">
-          <span>🎨</span>
-          <p>Creative Design Image</p>
-          <small>Replace with real image</small>
+          <img
+            src={cdImage}
+            alt="Strategic Planning"
+            className="hero-image"
+          />
         </div>
       </section>
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>🖌</span>
-          <p>Creative work image</p>
-        </div>
+             <div className="image-placeholder branding-project">
+  <img
+    src={crdImage}
+    alt="Branding project"
+    className="branding-project-image"
+  />
+</div>
 
         <div>
           <p className="eyebrow">Creative Studio</p>

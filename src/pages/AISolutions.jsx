@@ -1,5 +1,8 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import aiVideo from "../assets/ai.mp4";
+import aiImage from "../assets/model.png";
+import aidImage from "../assets/aid.png";
 
 function AISolutions() {
   return (
@@ -27,19 +30,27 @@ function AISolutions() {
           </div>
         </div>
 
-        <div className="image-placeholder large">
-          <span>🤖</span>
-          <p>AI Business Solutions</p>
-          <small>Replace with real AI image</small>
-        </div>
+        <div className="image-placeholder large video-container">
+  <video
+    className="website-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src={aiVideo} type="video/mp4" />
+  </video>
+</div>
       </section>
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>🧠</span>
-          <p>AI strategy image</p>
-          <small>Replace with automation/team image</small>
-        </div>
+       <div className="image-placeholder marketing-image">
+         <img
+           src={aidImage}
+           alt="AI strategy"
+           className="marketing-img"
+         />
+       </div>
 
         <div>
           <p className="eyebrow">AI For Business</p>
@@ -182,11 +193,13 @@ function AISolutions() {
           </p>
         </div>
 
-        <div className="image-placeholder">
-          <span>⚙️</span>
-          <p>Model selection image</p>
-          <small>Replace with model/AI workflow graphic</small>
-        </div>
+        <div className="image-placeholder marketing-image">
+         <img
+           src={aiImage}
+           alt="AI models"
+           className="marketing-img"
+         />
+       </div>
       </section>
 
       <section className="page-section">

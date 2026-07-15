@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import main2 from "../assets/main2.jpg";
+import main1 from "../assets/main1.jpg";
 
 const homeServices = [
   {
@@ -40,7 +42,6 @@ function Home() {
     <>
       <section className="hero page-section">
         <div className="hero-text">
-          <p className="eyebrow">Premium Digital Agency</p>
           <h1>
             We Create <span>Digital Experiences</span> That Drive Results
           </h1>
@@ -60,10 +61,13 @@ function Home() {
         </div>
 
         <div className="hero-image">
-          <div className="image-placeholder large">
-            <span>🧠</span>
-            <p>Replace this with hero image</p>
-          </div>
+           <div className="image-placeholder large">
+           <img
+             src={main1}
+             alt="Digital marketing"
+             className="hero-image"
+           />
+         </div>
         </div>
       </section>
 
@@ -91,10 +95,13 @@ function Home() {
       <Stats />
 
       <section className="split-section page-section">
-        <div className="image-placeholder">
-          <span>🌌</span>
-          <p>Replace with about image</p>
-        </div>
+       <div className="image-placeholder.cyb">
+                 <img
+                   src={main2}
+                   alt="Main2"
+                   className="hero-image"
+                 />
+               </div>
 
         <div>
           <p className="eyebrow">About Solutions Plus</p>

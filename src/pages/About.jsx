@@ -1,5 +1,7 @@
 import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
+import abut1 from "../assets/about.jpg";
+import abut2 from "../assets/videabout.mp4";
 
 function About() {
   return (
@@ -27,18 +29,26 @@ function About() {
           </div>
         </div>
 
-        <div className="image-placeholder large">
-          <span>🌌</span>
-          <p>About image placeholder</p>
-          <small>Replace this with real about image</small>
-        </div>
+      <div className="image-placeholder large">
+             <img
+               src={abut1}
+               alt="Contact"
+               className="hero-image"
+             />
+           </div>
       </section>
 
       <section id="about-content" className="split-section page-section">
-        <div className="image-placeholder">
-          <span>🤝</span>
-          <p>Company story image</p>
-          <small>Replace with team/company image</small>
+           <div className="image-placeholder large video-container">
+          <video
+            className="website-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={abut2} type="video/mp4" />
+          </video>
         </div>
 
         <div>

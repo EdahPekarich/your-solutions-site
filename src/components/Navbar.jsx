@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import splusLogo from "../assets/splus_logo_white1.png";
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -12,12 +12,15 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      <Link to="/" className="logo" onClick={closeMenu}>
-        <span className="logo-mark">✦</span>
-        <span>
-          Solutions<span>Plus</span>
-        </span>
-      </Link>
+     <Link to="/" className="logo" onClick={closeMenu}>
+  <span>
+    <img
+      src={splusLogo}
+      alt="S Plus logo"
+      className="navbar-logo"
+    />
+  </span>
+</Link>
 
       <button
         type="button"
