@@ -8,10 +8,11 @@ function CyberSecurity() {
   return (
     <>
       <section className="inner-hero page-section">
-        <div>
+        <div className="hero-text">
           <p className="eyebrow">Cyber Security</p>
           <h1>The Solution To Your Security Issues</h1>
           <h3>Protect your business, systems, data, and digital assets.</h3>
+
           <p>
             Cybersecurity is no longer optional. We help businesses identify
             risks, strengthen defenses, and protect their operations from modern
@@ -23,33 +24,35 @@ function CyberSecurity() {
             <a href="#security-services" className="btn-primary">
               Consult Now
             </a>
+
             <a href="/contact" className="btn-secondary">
               Contact Us
             </a>
           </div>
         </div>
 
-        <div className="image-placeholder.cyb">
+        <div className="responsive-image-frame hero-media cyber-hero-media">
           <img
             src={cyberSecurityImage}
-            alt="CyberSecurity"
-            className="hero-image"
+            alt="Cybersecurity"
+            className="responsive-image cyber-hero-image"
           />
         </div>
       </section>
 
       <section className="split-section page-section">
-      <div className="image-placeholder large">
-        <img
-          src={cyssImage}
-          alt="Cybersec"
-          className="hero-image"
-        />
-      </div>
+        <div className="responsive-image-frame split-media">
+          <img
+            src={cyssImage}
+            alt="Digital security solutions"
+            className="responsive-image cyber-service-image"
+          />
+        </div>
 
-        <div>
+        <div className="split-content">
           <p className="eyebrow">Our Services</p>
           <h2>We provide digital security solutions.</h2>
+
           <p>
             We provide digital security solutions designed to protect your
             business, customers, data, and infrastructure. Our services combine
@@ -65,6 +68,7 @@ function CyberSecurity() {
         <div className="section-heading center">
           <p className="eyebrow">Security Services</p>
           <h2>Cyber Security Services</h2>
+
           <p>
             Our services help businesses understand risks, prevent incidents,
             and improve cyber resilience.
@@ -127,10 +131,11 @@ function CyberSecurity() {
         </div>
       </section>
 
-      <section className="split-section page-section">
-        <div>
+      <section className="split-section page-section cyber-importance">
+        <div className="split-content">
           <p className="eyebrow">Why It Matters</p>
           <h2>Why is cyber security important for your business?</h2>
+
           <p>
             For many businesses, a cyberattack is not a matter of if, but when.
             Without the right security infrastructure, companies risk data loss,
@@ -138,11 +143,11 @@ function CyberSecurity() {
           </p>
         </div>
 
-        <div className="image-placeholder large">
+        <div className="responsive-image-frame split-media">
           <img
             src={cysssImage}
-            alt="Cysec"
-            className="hero-image"
+            alt="Importance of cybersecurity"
+            className="responsive-image cyber-importance-image"
           />
         </div>
       </section>
