@@ -12,15 +12,15 @@ function ContactSection() {
         <div className="contact-details">
           <div>
             <span>☎</span>
-            <p>+012 345 67890</p>
+            <p>+41 78 301 55 42</p>
           </div>
           <div>
             <span>✉</span>
-            <p>info@yoursolutionsplus.com</p>
+            <p>e.pekarich@gmail.com</p>
           </div>
           <div>
             <span>⌖</span>
-            <p>123, Street Name, City, Country</p>
+            <p>Haldengasse 41, Eschen, Liechtenstein</p>
           </div>
         </div>
       </div>

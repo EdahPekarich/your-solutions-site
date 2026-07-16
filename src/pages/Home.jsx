@@ -3,7 +3,44 @@ import Stats from "../components/Stats";
 import ContactSection from "../components/ContactSection";
 import main2 from "../assets/main2.jpg";
 import main1 from "../assets/main1.jpg";
-
+import brandCampaignImage from "../assets/brand.png";
+import websiteProjectImage from "../assets/rolls.png";
+import securityImage from "../assets/aiba.png";
+import creativeIdentityImage from "../assets/logo.png";
+const portfolioProjects = [
+  {
+    icon: "📣",
+    title: "Brand Campaign",
+    category: "Marketing",
+    image: brandCampaignImage,
+    description:
+      "Creative marketing campaigns designed to improve brand visibility, engagement, and customer growth.",
+  },
+  {
+    icon: "💻",
+    title: "Corporate Website",
+    category: "Web Development",
+    image: websiteProjectImage,
+    description:
+      "Modern, responsive websites created to provide a professional and seamless digital experience.",
+  },
+  {
+    icon: "🛡️",
+    title: "Security Consulting",
+    category: "Cyber Security",
+    image: securityImage,
+    description:
+      "Professional cybersecurity assessments and solutions designed to protect systems, data, and operations.",
+  },
+  {
+    icon: "🎨",
+    title: "Creative Identity",
+    category: "Design",
+    image: creativeIdentityImage,
+    description:
+      "Distinctive branding, logo design, and visual assets that create a memorable company identity.",
+  },
+];
 const homeServices = [
   {
     icon: "🚀",
@@ -172,31 +209,38 @@ function Home() {
           <h2>Our Recent Works</h2>
         </div>
 
-        <div className="portfolio-grid">
-          <div className="portfolio-card">
-            <span>📣</span>
-            <h3>Brand Campaign</h3>
-            <p>Marketing</p>
-          </div>
+       <div className="portfolio-grid">
+  {portfolioProjects.map((project) => (
+    <div
+      className="portfolio-card portfolio-image-card"
+      key={project.title}
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="portfolio-background-image"
+      />
 
-          <div className="portfolio-card">
-            <span>💻</span>
-            <h3>Corporate Website</h3>
-            <p>Web Development</p>
-          </div>
+      <div className="portfolio-image-overlay"></div>
 
-          <div className="portfolio-card">
-            <span>🛡️</span>
-            <h3>Security Consulting</h3>
-            <p>Cyber Security</p>
-          </div>
+      <div className="portfolio-card-content">
+        <span className="portfolio-icon">{project.icon}</span>
 
-          <div className="portfolio-card">
-            <span>🎨</span>
-            <h3>Creative Identity</h3>
-            <p>Design</p>
-          </div>
+        <div className="portfolio-card-info">
+          <h3>{project.title}</h3>
+
+          <p className="portfolio-category">
+            {project.category}
+          </p>
+
+          <p className="portfolio-hover-description">
+            {project.description}
+          </p>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
       </section>
 
       <ContactSection />
