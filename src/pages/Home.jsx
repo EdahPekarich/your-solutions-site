@@ -18,7 +18,7 @@ const portfolioProjects = [
   },
   {
     icon: "💻",
-    title: "Corporate Website",
+    title: "Coorporate Website",
     category: "Web Development",
     image: websiteProjectImage,
     description:
