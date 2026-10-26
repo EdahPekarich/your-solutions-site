@@ -1,123 +1,43 @@
+const sendEmail = async (e) => {
+  e.preventDefault();
 
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+  if (sending) return;
 
-function ContactSection() {
-  const form = useRef(null);
-  const [sending, setSending] = useState(false);
-  const [status, setStatus] = useState("");
-  const [success, setSuccess] = useState(false);
+  const serviceId = import.meta.env.LA_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.LA_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.LA_EMAILJS_PUBLIC_KEY;
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  console.log("EmailJS configuration:", {
+    serviceLoaded: Boolean(serviceId),
+    templateLoaded: Boolean(templateId),
+    publicKeyLoaded: Boolean(publicKey),
+  });
 
-    if (sending) return;
+  if (!serviceId || !templateId || !publicKey) {
+    setSuccess(false);
+    setStatus("Email configuration is missing.");
+    return;
+  }
 
-    setSending(true);
-    setStatus("");
+  setSending(true);
+  setStatus("");
 
-    try {
-      await emailjs.sendForm(
-        import.meta.env.LA_EMAILJS_SERVICE_ID,
-        import.meta.env.LA_EMAILJS_TEMPLATE_ID,
-        form.current,
-        {
-          publicKey: import.meta.env.LA_EMAILJS_PUBLIC_KEY,
-        }
-      );
+  try {
+    await emailjs.sendForm(
+      serviceId,
+      templateId,
+      form.current,
+      { publicKey }
+    );
 
-      setSuccess(true);
-      setStatus("Your message has been sent successfully!");
-      form.current.reset();
-
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-      setSuccess(false);
-      setStatus("Something went wrong. Please try again.");
-
-    } finally {
-      setSending(false);
-    }
-  };
-
-  return (
-    <section className="contact-section">
-      <div className="contact-left">
-        <p className="eyebrow">Get in touch</p>
-        <h2>Let’s Start Your Project</h2>
-        <p>
-          Have a project in mind? Send us a message and we will help you find the
-          right solution.
-        </p>
-
-        <div className="contact-details">
-          <div>
-            <span>☎</span>
-            <p>+41 78 301 55 42</p>
-          </div>
-          <div>
-            <span>✉</span>
-            <p>e.pekarich@gmail.com</p>
-          </div>
-          <div>
-            <span>⌖</span>
-            <p>Haldengasse 41, Eschen, Liechtenstein</p>
-          </div>
-        </div>
-      </div>
-
-      <form
-        ref={form}
-        className="contact-form"
-        onSubmit={sendEmail}
-      >
-        <div className="form-row">
-          <input
-            type="text"
-            name="from_name"
-            placeholder="Your Name"
-            required
-          />
-
-          <input
-            type="email"
-            name="from_email"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-
-        <input
-          type="text"
-          name="subject"
-          placeholder="Your Subject"
-          required
-        />
-
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          required
-        ></textarea>
-
-        <button type="submit" disabled={sending}>
-          {sending ? "Sending..." : "Send Message →"}
-        </button>
-
-        {status && (
-          <p
-            role="status"
-            style={{
-              color: success ? "#16a34a" : "#dc2626",
-              marginTop: "12px",
-            }}
-          >
-            {status}
-          </p>
-        )}
-      </form>
-    </section>
-  );
-}
-
-export default ContactSection;
+    setSuccess(true);
+    setStatus("Your message has been sent successfully!");
+    form.current.reset();
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    setSuccess(false);
+    setStatus("Something went wrong. Please try again.");
+  } finally {
+    setSending(false);
+  }
+};
