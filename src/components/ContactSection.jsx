@@ -7,7 +7,11 @@ function ContactSection() {
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState("");
   const [success, setSuccess] = useState(false);
-
+console.log("VERCEL EMAILJS CHECK", {
+  service: Boolean(import.meta.env.LA_EMAILJS_SERVICE_ID),
+  template: Boolean(import.meta.env.LA_EMAILJS_TEMPLATE_ID),
+  publicKey: Boolean(import.meta.env.LA_EMAILJS_PUBLIC_KEY),
+});
   const sendEmail = async (e) => {
     e.preventDefault();
 
@@ -117,6 +121,7 @@ function ContactSection() {
         )}
       </form>
     </section>
+    
   );
 }
 
