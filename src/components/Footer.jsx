@@ -33,12 +33,34 @@ function Footer() {
 
         <div>
           <h4>Follow Us</h4>
-          <div className="socials">
-            <span>f</span>
-            <span>in</span>
-            <span>ig</span>
-            <span>x</span>
-          </div>
+         <div className="socials">
+  <a
+    href="https://www.facebook.com/share/1C4znisE5q/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    f
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/tvoja-kompanija"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    in
+  </a>
+
+  <a
+    href="https://www.instagram.com/getsolutionspluseu?xtok=cDYzY2xwNDRsZTBj"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    ig
+  </a>
+</div>
         </div>
       </footer>
 
