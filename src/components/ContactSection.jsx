@@ -61,7 +61,7 @@ console.log("VERCEL EMAILJS CHECK", {
           </div>
           <div>
             <span>✉</span>
-            <p>e.pekarich@gmail.com</p>
+            <p>info@getsolutionsplus.com</p>
           </div>
           <div>
             <span>⌖</span>
