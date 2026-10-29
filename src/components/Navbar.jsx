@@ -1,10 +1,25 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import splusLogo from "../assets/splus_logo_white1.png";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+const navigate = useNavigate();
+const location = useLocation();
 
+const goToPricing = () => {
+  closeMenu();
+
+  if (location.pathname === "/") {
+    document.getElementById("pricing")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  } else {
+    navigate("/#pricing");
+  }
+};
   const closeMenu = () => {
     setOpen(false);
     setServicesOpen(false);
@@ -74,9 +89,13 @@ function Navbar() {
             </div>
           )}
         </div>
-<Link to="/#pricing" onClick={closeMenu}>
-          Pricing
-        </Link>
+<button
+  type="button"
+  className="pricing-nav-link"
+  onClick={goToPricing}
+>
+  Pricing
+</button>
 
         <NavLink to="/contact" className="nav-cta" onClick={closeMenu}>
           Consult Us
