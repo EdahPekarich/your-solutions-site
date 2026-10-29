@@ -89,13 +89,9 @@ const goToPricing = () => {
             </div>
           )}
         </div>
-<button
-  type="button"
-  className="pricing-nav-link"
-  onClick={goToPricing}
->
+<Link to="/#pricing" onClick={closeMenu}>
   Pricing
-</button>
+</Link>
 
         <NavLink to="/contact" className="nav-cta" onClick={closeMenu}>
           Consult Us
