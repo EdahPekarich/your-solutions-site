@@ -7,6 +7,7 @@ import brandCampaignImage from "../assets/brand.png";
 import websiteProjectImage from "../assets/rolls.png";
 import securityImage from "../assets/aiba.png";
 import creativeIdentityImage from "../assets/logo.png";
+import PricingSection from "../components/PricingSection";
 const portfolioProjects = [
   {
     icon: "📣",
@@ -73,7 +74,23 @@ const homeServices = [
     link: "/services/creative_designs",
   },
 ];
+<section className="pricing-section" id="pricing">
+  <h2>Explore Our Packages</h2>
 
+  <p>
+    Find the right solution for your business.
+    Explore our services, compare packages,
+    and discover pricing designed to fit your needs.
+  </p>
+
+  <a
+    href="/SolutionsPlus-Pricing.pdf"
+    download="SolutionsPlus-Pricing.pdf"
+    className="pricing-download"
+  >
+    ↓ Download Pricing Brochure
+  </a>
+</section>
 function Home() {
   return (
     <>
@@ -242,7 +259,7 @@ function Home() {
   ))}
 </div>
       </section>
-
+<PricingSection />
       <ContactSection />
     </>
   );

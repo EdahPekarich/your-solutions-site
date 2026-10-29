@@ -74,6 +74,9 @@ function Navbar() {
             </div>
           )}
         </div>
+<Link to="/#pricing" onClick={closeMenu}>
+          Pricing
+        </Link>
 
         <NavLink to="/contact" className="nav-cta" onClick={closeMenu}>
           Consult Us
