@@ -11,13 +11,18 @@ const location = useLocation();
 const goToPricing = () => {
   closeMenu();
 
-  if (location.pathname === "/") {
-    document.getElementById("pricing")?.scrollIntoView({
+  if (location.pathname !== "/") {
+    navigate("/#pricing");
+    return;
+  }
+
+  const pricing = document.getElementById("pricing");
+
+  if (pricing) {
+    pricing.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-  } else {
-    navigate("/#pricing");
   }
 };
   const closeMenu = () => {
@@ -89,9 +94,13 @@ const goToPricing = () => {
             </div>
           )}
         </div>
-<Link to="/#pricing" onClick={closeMenu}>
+<button
+  type="button"
+  className="pricing-nav-link"
+  onClick={goToPricing}
+>
   Pricing
-</Link>
+</button>
 
         <NavLink to="/contact" className="nav-cta" onClick={closeMenu}>
           Consult Us
